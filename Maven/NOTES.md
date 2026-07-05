@@ -1,6 +1,4 @@
-# 📦 Maven Deep Dive — Lecture 3 Notes
-
-> A complete beginner-to-intermediate guide to understanding **Maven**, JAR files, project structure, dependencies, repositories, and the build lifecycle.
+# 📦 Maven Deep Dive 
 
 ---
 
