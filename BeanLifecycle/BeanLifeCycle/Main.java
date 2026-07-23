@@ -10,6 +10,11 @@ public class Main {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         OrderService order = context.getBean(OrderService.class);
         order.placeOrder();
+
+        UserService obj = new UserService();
+        obj.setBeanName("bean2");
+
+
         }
     }
 
@@ -25,7 +30,19 @@ public class Main {
     IOC container will collect bean definitions
     and then will make objects
 
-    IOC CONTAINER => READ CONFIGURATION => READ BEAN DEFINITION => Instantiate Objects => Dependencies are injected
+    IOC CONTAINER => READ CONFIGURATION => READ BEAN DEFINITION => Instantiate Objects => Dependencies are injected => Aware Interfaces
+    => Initialization callbacks => Bean is ready to use => Destruction callbacks => Bean is destroyed
 
+
+
+UserService obj = new UserService();
+        obj.setBeanName("bean2");
+        in this case we have called this
+        setBean method so it will print what is passed
+        but Bean name will remain same
+        that will be mentioned in @Component(" ")
+
+        eg : - @Component("Bean1")
+        so, original name will remain Bean1
 
      */
