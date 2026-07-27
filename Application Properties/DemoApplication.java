@@ -12,12 +12,12 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
 
-		PaymentGateway paymentGateway = context.getBean(PaymentGateway.class);
+		//PaymentGateway paymentGateway = context.getBean(PaymentGateway.class);
 		//paymentGateway.setType("Paytm");
 		//paymentGateway.setRetryCount(5);
-		System.out.println(paymentGateway.getType());
-		System.out.println(paymentGateway.getRetryCount());
-
+		//System.out.println(paymentGateway.getType());
+		//System.out.println(paymentGateway.getRetryCount());
+//paymentGateway.print();
 	}
 }
 
