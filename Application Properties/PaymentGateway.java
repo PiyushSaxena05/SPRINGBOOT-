@@ -5,34 +5,64 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PaymentGateway {
-    @Value("${paymentGateway.type}")
-    private String type;
+//    @Value("${paymentGateway.type}")
+//    private String type;
 
     //    @Value("${paymentGateway.type:Razorpay}") this is used when no value is being assigned
     // it will automatically take Razorpay and will print it.
-    @Value("${paymentGateway.retry-count}")
-    private int retryCount;
+//    @Value("${paymentGateway.retry-count}")
+//    private int retryCount;
 
 //    public PaymentGateway(@Value("${paymentGateway.retry-count}") int retryCount, @Value("${paymentGateway.type}") String type) {
 //        this.retryCount = retryCount;
 //        this.type = type;
 //    }
 
-    public String getType() {
-        return type;
-    }
+    private PaymentProperties paymentProperties;
 
-    public void setType(String type) {
-        this.type = type;
+    public PaymentGateway(PaymentProperties paymentProperties){
+        this.paymentProperties = paymentProperties;
+    }
+    public String getType() {
+        return paymentProperties.getType();
     }
 
     public int getRetryCount() {
-        return retryCount;
+        return paymentProperties.getRetryCount();
     }
 
-    public void setRetryCount(int retryCount) {
-        this.retryCount = retryCount;
+    public boolean isEnabled() {
+        return paymentProperties.isEnabled();
     }
 
+    public int getTimeout() {
+        return paymentProperties.getTimeout();
+    }
 
+    public void print() {
+        System.out.println(getType());
+        System.out.println(getRetryCount());
+        System.out.println(isEnabled());
+        System.out.println(getTimeout());
+    }
 }
+
+
+//    public String getType() {
+//        return type;
+//    }
+//
+//    public void setType(String type) {
+//        this.type = type;
+//    }
+//
+//    public int getRetryCount() {
+//        return retryCount;
+//    }
+//
+//    public void setRetryCount(int retryCount) {
+//        this.retryCount = retryCount;
+//    }
+
+
+
