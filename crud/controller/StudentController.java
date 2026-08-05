@@ -21,53 +21,19 @@ public class StudentController {
 
     @PostMapping("/create")
     public ResponseEntity<Student> createStudent(@RequestBody Student student) {
-
+        System.out.println("Inside Student Controller");
         Student createdStudent = studentService.createStudent(student);
-
+        System.out.println("Exiting Student Controller");
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(createdStudent);
     }
 
-    @GetMapping("/get")
-    public ResponseEntity<Student> getStudent(@RequestParam Long id) {
-            Student studentResp = studentService.getStudent(id);
+    // read student
 
-            if(studentResp == null) {
-                return ResponseEntity.notFound().build();
-            }
-            return ResponseEntity.ok(studentResp);
-    }
+    // update student
 
-    @GetMapping("/getAll")
-    public ResponseEntity<List<Student>> getAllStudent() {
-        List<Student> studentList = studentService.getAllStudent();
+    // delete student
 
-        if(studentList.isEmpty()) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(studentList);
-    }
 
-    @PutMapping("/update")
-    public ResponseEntity<Student> updateStudent(@RequestParam Long id,
-                                                 @RequestBody Student studentReq) {
-        Student studentResp = studentService.updateStudent(id, studentReq);
-
-        if(studentResp == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(studentResp);
-    }
-
-    @DeleteMapping("/delete")
-    public ResponseEntity<String> deleteStudent(@RequestParam Long id) {
-        Boolean isDeleted = studentService.deleteStudent(id);
-
-        if(!isDeleted) {
-            return ResponseEntity.notFound().build();
-        }
-
-        return ResponseEntity.ok("Record deleted");
-    }
 }
