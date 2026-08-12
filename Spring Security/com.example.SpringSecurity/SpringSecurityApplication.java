@@ -109,5 +109,9 @@ what all things can be accessed.
 Role means responsibility - which all authorities a person can have,
 e.g. - Admin can have multiple authorities.
 
+principal = "latest user"
+credentials = "raw-password"
+authorities = []
+authenticated = false
 
  */
