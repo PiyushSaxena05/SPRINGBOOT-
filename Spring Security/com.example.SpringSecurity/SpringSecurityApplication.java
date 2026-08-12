@@ -11,3 +11,70 @@ public class SpringSecurityApplication {
 	}
 
 }
+
+/*
+Assets ->valuable resources
+|
+Data Assets ->application related data
+|
+operational assets -> operation that can be performed
+|
+security assets ->session id and all
+|
+Infra Assets -> databases, application, servers etc.
+|
+Availability -> application is up to how much time
+
+
+
+Threat - intentional harm
+
+Vulnerability - weak point of our application on which hacker
+can create threat
+
+
+Threat + vulnerability = Attack
+
+
+Authentication
+This means acceptation or rejection of a claim.
+
+Suppose, I have written my name is
+Piyush
+
+so, the site will provide some username and password
+on the basis of which my claim will be accepted or rejected.
+
+
+What is Authorization??
+This means after Authentication we can enter the application
+but, to which all parts we can interact will tell
+our authorization, or we can say what is our role
+example:- admin,user,manager etc.
+In instagram we have access to our own accounts,
+and we can handle our post stories etc.
+
+
+Authentication:- it is divided into 3 parts
+1) something we know
+password
+pin
+security answer
+
+2)something you have
+smart card
+Authenticator app
+cryptographic key
+
+3)something you are
+Fingerprint
+Iris
+Face
+
+
+MFA (MULTI-FACTOR AUTHENTICATION APP)
+
+Authorization-> Role
+
+
+ */
