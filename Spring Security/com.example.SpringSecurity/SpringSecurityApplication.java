@@ -56,15 +56,19 @@ and we can handle our post stories etc.
 
 
 Authentication:- it is divided into 3 parts
+
+
 1) something we know
 password
 pin
 security answer
 
+
 2)something you have
 smart card
 Authenticator app
 cryptographic key
+
 
 3)something you are
 Fingerprint
@@ -74,7 +78,9 @@ Face
 
 MFA (MULTI-FACTOR AUTHENTICATION APP)
 
+
 Authorization-> Role
+
 
 Identity
 Credentials
@@ -86,8 +92,13 @@ Authentication
 SecurityContext
 SecurityContextHolder
 
+
 Identity - User, Customer, Scheduled Job
 It is an entity whose action is to be recognized.
+
+Credentials- To prove identity, credentials are provided
+E.g.- username, otp, password 
+
 
 
  */
