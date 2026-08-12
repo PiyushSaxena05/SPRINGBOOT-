@@ -114,4 +114,9 @@ credentials = "raw-password"
 authorities = []
 authenticated = false
 
+Authentication Principal
+principal = UserDetails("latest user")
+credentials = null
+authorities = [COURSE_READ,COURSE_UPDATE]
+authenticated = true
  */
