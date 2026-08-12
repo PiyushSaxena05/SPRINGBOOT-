@@ -86,5 +86,8 @@ Authentication
 SecurityContext
 SecurityContextHolder
 
+Identity - User, Customer, Scheduled Job
+It is an entity whose action is to be recognized.
+
 
  */
