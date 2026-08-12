@@ -99,15 +99,15 @@ It is an entity whose action is to be recognized.
 Credentials- To prove identity, credentials are provided
 E.g.- username, otp, password.
 
-Principal - current identity
-Suppose, if I am verifying any person
+Principal - current or active identity
+Suppose if I am verifying any person
 so that the particular latest person is called as principal.
 
-Authorities 
+Authorities
 what all things can be accessed.
 
-
-
+Role means responsibility - which all authorities a person can have,
+e.g. - Admin can have multiple authorities.
 
 
  */
