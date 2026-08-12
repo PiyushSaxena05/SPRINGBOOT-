@@ -76,5 +76,15 @@ MFA (MULTI-FACTOR AUTHENTICATION APP)
 
 Authorization-> Role
 
+Identity
+Credentials
+Principal
+Authorities
+Roles
+Permissions
+Authentication
+SecurityContext
+SecurityContextHolder
+
 
  */
