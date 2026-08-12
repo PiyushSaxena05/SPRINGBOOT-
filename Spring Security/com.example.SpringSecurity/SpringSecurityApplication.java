@@ -103,6 +103,9 @@ Principal - current identity
 Suppose, if I am verifying any person
 so that the particular latest person is called as principal.
 
+Authorities 
+what all things can be accessed.
+
 
 
 
