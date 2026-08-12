@@ -119,4 +119,9 @@ principal = UserDetails("latest user")
 credentials = null
 authorities = [COURSE_READ,COURSE_UPDATE]
 authenticated = true
+
+Authentication states
+
+Stateful Authentication
+Stateless Authentication 
  */
