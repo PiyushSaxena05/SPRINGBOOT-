@@ -97,7 +97,13 @@ Identity - User, Customer, Scheduled Job
 It is an entity whose action is to be recognized.
 
 Credentials- To prove identity, credentials are provided
-E.g.- username, otp, password 
+E.g.- username, otp, password.
+
+Principal - current identity
+Suppose, if I am verifying any person
+so that the particular latest person is called as principal.
+
+
 
 
 
