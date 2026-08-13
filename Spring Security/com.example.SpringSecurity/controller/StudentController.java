@@ -17,10 +17,17 @@ public class StudentController {
     }
 
     @DeleteMapping
-    public ResponseEntity<String>deleteStudent(){
+    public ResponseEntity<String>deleteStudent() {
         return ResponseEntity.ok("Students deleted successfully");
         
         
+    }
+
+    @PutMapping
+    public ResponseEntity<String>updateStudent() {
+        return ResponseEntity.ok("Students updated successfully");
+
+
     }
 
 }
