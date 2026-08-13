@@ -1,6 +1,7 @@
 package com.example.SpringSecurity.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,15 +20,19 @@ public class StudentController {
     @DeleteMapping
     public ResponseEntity<String>deleteStudent() {
         return ResponseEntity.ok("Students deleted successfully");
-        
-        
+
+
     }
 
     @PutMapping
     public ResponseEntity<String>updateStudent() {
         return ResponseEntity.ok("Students updated successfully");
 
+    }
 
+    @GetMapping
+    public CsrfToken getToken(CsrfToken csrfToken){
+        return csrfToken;
     }
 
 }
