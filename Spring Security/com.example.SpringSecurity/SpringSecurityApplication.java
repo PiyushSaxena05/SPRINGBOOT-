@@ -136,11 +136,37 @@ Stateless Authentication
                         /
 client -> load balancer -> Application  |   => Authentication
  |    /login             \
- |    ""                   Application''|   
+ |    ""                   Application''|
  sessions id:123
  now, suppose if session id 123 is requested to any application
  so, data can be fetched from central cache regarding that particular session id.
- 
+
+
+
+client ----> application  ---> token service
+/getUser()
+token : <opaque>
+
+self-contained has all the information of the user
+whereas opaque does not have full information like
+self-contained token.
+
+with self-contained we can fetch all the info but
+in opaque that token is to be given to token service
+and token service will give us an authentication object....
+
+
+
+Bearer token: trh2343adsa some random value
+
+when someone is sending a bearer token is the one who has
+self owned this token...the token is self-contained, but sometimes
+it can be opaque
+
+
+in stateful, an old authentication object is used
+whereas in a stateless new object is created, and this is the main
+difference.
 
 
 
