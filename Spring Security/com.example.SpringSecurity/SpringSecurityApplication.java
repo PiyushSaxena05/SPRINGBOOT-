@@ -132,13 +132,15 @@ Authentication states
 Stateful Authentication
 Stateless Authentication
 
-                         Application
+                         Application    |          Redis(central cache)
                         /
-client -> load balancer -> Application
-                        \
-                         Application
-
-
+client -> load balancer -> Application  |   => Authentication
+ |    /login             \
+ |    ""                   Application''|   
+ sessions id:123
+ now, suppose if session id 123 is requested to any application
+ so, data can be fetched from central cache regarding that particular session id.
+ 
 
 
 
