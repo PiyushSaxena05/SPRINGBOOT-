@@ -98,7 +98,7 @@ It is an entity whose action is to be recognized.
 
 Credentials- To prove identity, credentials are provided
 E.g.- username, otp, password.
-
++
 Principal - current or active identity
 Suppose if I am verifying any person
 so that the particular latest person is called as principal.
@@ -109,10 +109,16 @@ what all things can be accessed.
 Role means responsibility - which all authorities a person can have,
 e.g. - Admin can have multiple authorities.
 
+
+Authentication
+
+Authentication Request
+
 principal = "latest user"
 credentials = "raw-password"
 authorities = []
 authenticated = false
+
 
 Authentication Principal
 principal = UserDetails("latest user")
@@ -120,8 +126,22 @@ credentials = null
 authorities = [COURSE_READ,COURSE_UPDATE]
 authenticated = true
 
+
 Authentication states
 
 Stateful Authentication
-Stateless Authentication 
+Stateless Authentication
+
+                         Application
+                        /
+client -> load balancer -> Application
+                        \
+                         Application
+
+
+
+
+
+
+
  */
