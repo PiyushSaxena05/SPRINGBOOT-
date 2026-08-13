@@ -173,7 +173,12 @@ difference.
 client -> tomcat -> filter chain of spring security -> dispatcher servlet -> controller
 
 SecurityAutoConfiguration
-UserDetailsServiceAutoConfiguration
+which authentication mechanism is need to be used and which all endpoints
+are need to be authenticated.
+
+UserDetailsServiceAutoConfiguration - which users are need to be authenticated
+and from where these users are loaded.
+
 
 
 
