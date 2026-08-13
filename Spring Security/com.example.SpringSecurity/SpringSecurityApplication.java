@@ -170,6 +170,11 @@ difference.
 
 
 
+client -> tomcat -> filter chain of spring security -> dispatcher servlet -> controller
+
+SecurityAutoConfiguration
+UserDetailsServiceAutoConfiguration
+
 
 
  */
