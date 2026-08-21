@@ -2,6 +2,9 @@ package com.SpringSecurityDatabase.SpringSecurity.entity;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 public class User {
 
@@ -9,7 +12,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-       @Column(nullable = false,unique = true)
+    @Column(nullable = false,unique = true)
     String username;
 
     @Column(nullable = false)
@@ -17,6 +20,12 @@ public class User {
 
     private Boolean enabled = true;
 
- 
-    
+    @ManyToMany
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<Role> roles = new HashSet<>();
+
 }
